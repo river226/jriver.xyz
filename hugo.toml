@@ -1,23 +1,88 @@
 baseURL = 'https://jriver.xyz/'
 languageCode = 'en-us'
-title = 'JRiver Blog'
+title = 'jriver Blog and Portfolio'
 theme = 'hugo-blog-awesome'
+defaultContentLanguage = "en-gb"
+enableEmoji = true
+ignoreErrors = ["additional-script-loading-error"]
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+  [markup.goldmark.renderer]
+    unsafe = true
+	[markup.tableOfContents]
+		startLevel = 2 
+		endLevel = 4 
+		ordered = false
+
+############################## English language ################################
+[Languages.en-gb]
+  languageName = "English"
+  languageCode = "en-gb"
+  contentDir = "content/en"
+  weight = 1
+
+  [Languages.en-gb.menu]
+  [[Languages.en-gb.menu.main]]
+    pageRef="/"
+    name = 'Home'
+    url = '/'
+    weight = 10
+  [[Languages.en-gb.menu.main]]
+    pageRef="posts"
+    name = 'Posts'
+    url = '/posts/'
+    weight = 20
+  [[Languages.en-gb.menu.main]]
+    pageRef="about"
+    name = 'About'
+    url = '/about/'
+    weight = 30
+
+[Languages.en-gb.params]
+  sitename = "jriver code"
+  defaultColor = "dark" 
+  description = "Jedidiah River Clemons-Johnson's Blog and Portfolio"
+  mainSections = ['posts']
+  toc = true # set to false to disable table of contents 'globally'
+  tocOpen = false # set to true to open table of contents by default
+  goToTop = true # set to false to disable 'go to top' button
+  additionalScripts = ['js/custom.js', 'js/custom-2.js']
+
+[Languages.en-gb.params.author]
+  avatar = "avatar/cat.jpg"
+  intro = "Jedidiah River Clemons-Johnson"
+  name = "jriver"
+  description = "Hi and welcome to my page. I am an experienced Software Engineer, who is constantly curious and exploring."
+
+# Allow to override webmanifest options
+[Languages.en-gb.params.webmanifest]
+  name = "jriver code"
+  short_name = "jriver code" 
+  start_url = "/" 
+  theme_color = "#434648"
+  background_color = "#fff"
+  display = "standalone"
+
+###################################################################
+
+# Allow to override `browserconfig.xml` params (configuration for windows embedded browsers)
+[params.browserconfig]
+  TileColor = "#2d89ef" # default windows 10 blue tile color
+
 
 [[params.socialIcons]]
 name = "github"
-url = "https://github.com/hugo-sid"
+url = "https://github.com/river226"
 
 [[params.socialIcons]]
 name = "gitlab"
-url = "index.xml"
+url = "https://gitlab.com/river226"
 
 [[params.socialIcons]]
 name = "linkedin"
-url = "https://twitter.com"
-
-[params]
-  goToTop = true
-
+url = "https://www.linkedin.com/in/jedidiahriver/"
 
 
 
