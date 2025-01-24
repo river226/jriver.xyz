@@ -1,11 +1,8 @@
 name: SCP_Deploy
 
 on:
-  workflow_run:
-    workflows: ["deploy"]
-    types: [requested]
-    branches:
-      - 'main'
+  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
