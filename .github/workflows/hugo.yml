@@ -48,4 +48,4 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           source: ./public/*
-          target: /home/public
+          target: /home
